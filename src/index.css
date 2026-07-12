@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  --color-ink: #241611;
+  --color-cocoa-900: #3a2416;
+  --color-cocoa-800: #5c3a26;
+  --color-cocoa-700: #7a4d31;
+  --color-cocoa-600: #96633f;
+  --color-gold-500: #c9974d;
+  --color-gold-400: #dcb877;
+  --color-gold-300: #ecd6a8;
+  --color-cream-100: #fbf2e4;
+  --color-cream-50: #fffaf2;
+  --color-berry-700: #6c1f2c;
+  --color-berry-600: #832739;
+  --color-lilac-500: #b48fc4;
+  --color-lilac-300: #dcc9e6;
+
+  --shadow-soft: 0 20px 50px -20px rgba(36, 22, 17, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream-50);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--color-berry-700);
+  color: var(--color-cream-50);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-500);
+  border-radius: 999px;
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-berry-700);
+  outline-offset: 3px;
+}
